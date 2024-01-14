@@ -6,7 +6,7 @@ from diffusers.utils import export_to_gif, load_image
 device = "cuda"
 
 
-vae_model_path = "/content/VAE/"
+vae_model_path = "/content/AnimateDiff_IP_Adapter_LoRa/VAE/"
 
 vae = AutoencoderKL.from_pretrained(vae_model_path).to(dtype=torch.float16)
 
