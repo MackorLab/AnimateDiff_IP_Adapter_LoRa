@@ -1,5 +1,6 @@
 # animate diff + ip adapter
 import torch
+import json
 from diffusers import MotionAdapter, AnimateDiffPipeline, DDIMScheduler, AutoencoderKL
 from diffusers.utils import export_to_gif, load_image
 
