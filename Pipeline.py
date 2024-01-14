@@ -15,9 +15,9 @@ adapter = MotionAdapter.from_pretrained("guoyww/animatediff-motion-adapter-v1-5-
 
 
 # Загрузка значения переменной из файла
-with open('file.pkl', 'rb') as file:
-    loaded_variable = pickle.load(file)
-print(loaded_variable)  # Выводит 'Hello, world!'
+with open('file.json', 'r') as file:
+    loaded_variable = json.load(file)
+print(loaded_variable) 
 
 
 
