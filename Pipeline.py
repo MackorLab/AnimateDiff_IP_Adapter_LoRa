@@ -22,7 +22,7 @@ print(loaded_variable)
 
 
 
-pipe = AnimateDiffPipeline.from_pretrained(loaded_variabl, motion_adapter=adapter,vae=vae, torch_dtype=torch.float16)
+pipe = AnimateDiffPipeline.from_pretrained(loaded_variable, motion_adapter=adapter,vae=vae, torch_dtype=torch.float16)
 
 pipe = pipe.to(device)
 
