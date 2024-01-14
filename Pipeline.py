@@ -14,7 +14,14 @@ vae = AutoencoderKL.from_pretrained(vae_model_path).to(dtype=torch.float16)
 adapter = MotionAdapter.from_pretrained("guoyww/animatediff-motion-adapter-v1-5-2", torch_dtype=torch.float16)
 
 
-pipe = AnimateDiffPipeline.from_pretrained(model_id, motion_adapter=adapter,vae=vae, torch_dtype=torch.float16)
+# Загрузка значения переменной из файла
+with open('file.pkl', 'rb') as file:
+    loaded_variable = pickle.load(file)
+print(loaded_variable)  # Выводит 'Hello, world!'
+
+
+
+pipe = AnimateDiffPipeline.from_pretrained(loaded_variabl, motion_adapter=adapter,vae=vae, torch_dtype=torch.float16)
 
 pipe = pipe.to(device)
 
